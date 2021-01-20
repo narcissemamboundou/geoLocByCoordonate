@@ -38,3 +38,8 @@ address_geo=address['address']
 city=address['address']['city']
 print(city)
 print(address_geo)
+
+
+position = folium.Map(location=(latitude,	longitude), zoom_start=12)
+folium.Marker(location=(latitude,longitude), popup='Landmark').add_to(position)
+display(position)
